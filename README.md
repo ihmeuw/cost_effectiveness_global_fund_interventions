@@ -1,5 +1,5 @@
-# Cost Effectiveness Meta Regression of HPV Vaccination
-This repository contains the code that performs the cost effectiveness meta-regression analysis of HPV vaccination programs. This analysis has been accepted for publication in PLOS ONE under the title, "Cost-effectiveness of HPV vaccination in 195 countries: A meta-regression analysis".
+# Cost Effectiveness Meta Regression of HIV/AIDS, Malaria, Syphilis and Tuberculosis
+This repository contains the code that performs the cost effectiveness meta-regression analysis of interventions to treat global fund priorities. This analysis has been accepted for publication in The Lancet Global Health under the title, "Cost-effectiveness of interventions for HIV/AIDS, malaria, syphilis, and tuberculosis in 128 countries: A meta-regression approach".
 
 ## Purpose
 The purpose for this repository is to make the analytic code for this project available as part of [Guidelines for Accurate and Transparent Health Estimates Reporting (GATHER)](http://gather-statement.org/) compliance.
