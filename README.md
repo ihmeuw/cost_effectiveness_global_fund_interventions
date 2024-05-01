@@ -23,7 +23,7 @@ Scripts should be run in the following order:
 
 4. data_prep_mr.py
 
-   Prepares the cleaned df, and then splits the clean dataset into the different cause treatment sets of datasets. 
+   Prepares the cleaned df, and then splits the clean dataset into the different cause intervention-type sets of datasets. 
 
 5. step_2_cov.py
 
@@ -31,20 +31,22 @@ Scripts should be run in the following order:
 
 6. creating_predictions_df.py
 
-   Creates the predictions datasets for each of the cause-treatment type pairs, for use in the step of the pipeline. 
+   Creates the predictions datasets for each of the cause-intervention-type pairs, for use in the step of the pipeline. 
 
 7. steps_3_5_mr.py
 
     Completes steps 3 through 5 of the modeling pipeline, selects covariates, calculates guassian priors for some variables, fits the final model, and calculates the predicted icers for each country using the prediction datasets made in previous step. This script is also run through a cli, with a number of inputs that are used at the top of the cli function. 
 
-8. {cause_treatment}_logistic_reg.R
+8. {cause_intervention-type}_logistic_reg.R
 
    Runs a logistic regression to predict the probability that our predicted ICERs are cost-saving and adjusts the predicted ICERs accordingly. There is code for only HIV ART and Malaria Prevention models as they were the only datasets that met the requirements for adjusting for cost saving ratios.
+
+9. The code to make the plots for the publication. 
 
 ## Inputs
 Inputs required for the code to run are:
 
-1. Valid paths to directories and files particularly "CLEANED_DF.csv", which is then subset to make each cause-treatment data subset.
+1. Valid paths to directories and files particularly "CLEANED_DF.csv", which is then subset to make each cause-intervention-type data subset.
 
-2. A file specifying the values of all covariates for each prediction. Its path is specified as f"{pred_dir}/predictions/{cause_int_combinations}_predictions_df.csv".
+2. A file specifying the values of all covariates for each prediction. Its path is specified as f"{pred_dir}/predictions/{cause_intervention_combinations}_predictions_df.csv".
 
